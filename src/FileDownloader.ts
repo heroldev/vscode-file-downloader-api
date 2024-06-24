@@ -38,6 +38,11 @@ export interface FileDownloadSettings {
      * }
      */
     headers?: Record<string, string | number | boolean> | undefined;
+    /**
+     * Whether to skip aggressive encoding on the URI, as `vscode.Uri.toString()` normally results in `&` and `=` becoming encoded.
+     * @default false
+     */
+    skipEncoding?: boolean
 }
 
 export default interface FileDownloader {
